@@ -13,20 +13,25 @@
     <li>Roupas</li>
 </ul>
 
-@component('components.alerta', ['titulo' => 'Teste', 'tipo' => 'info'])
+@alerta(['titulo' => 'Teste', 'tipo' => 'info'])
 <p><strong>Erro inesperado</strong></p>
 <p>Ocorreu um erro inesperado</p>
-@endcomponent
+@endalerta
 
-@component('components.alerta', ['titulo' => 'Teste', 'tipo' => 'error'])
+@alerta(['titulo' => 'Teste', 'tipo' => 'error'])
 <p><strong>Erro inesperado</strong></p>
 <p>Ocorreu um erro inesperado</p>
-@endcomponent
+@endalerta
 
-@component('components.alerta', ['titulo' => 'Teste', 'tipo' => 'success'])
+@alerta(['titulo' => 'Teste', 'tipo' => 'success'])
 <p><strong>Erro inesperado</strong></p>
 <p>Ocorreu um erro inesperado</p>
-@endcomponent
+@endalerta
+
+@alerta(['titulo' => 'Teste', 'tipo' => 'warning'])
+<p><strong>Erro inesperado</strong></p>
+<p>Ocorreu um erro inesperado</p>
+@endalerta
 
 
 @endsection
