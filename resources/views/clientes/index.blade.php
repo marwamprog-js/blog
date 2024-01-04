@@ -20,6 +20,25 @@
                 </li>
             @endforeach
         </ul>  
+
+        {{-- @for($i = 0; $i < 10; $i++)
+            {{ $i }}
+        @endfor --}}
+
+        @foreach ($clientes as $c)
+            <br>{{ $c['nome'] }}
+            @if ($loop->first)
+                (Primeiro)
+            @endif
+            @if ($loop->last)
+                (Ultimo)
+            @endif
+
+            ({{ $loop->index }}) - {{ $loop->iteration }} | {{ $loop->count }}
+        @endforeach    
+
+
+
     @else
         <p>Não exitem clientes cadastrados</p>
     @endif

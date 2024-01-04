@@ -18,8 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('produtos', 'MeuControlador@produtos');
-Route::get('nome', 'MeuControlador@getNome');
-Route::get('multiplicar/{n1}/{n2}', 'MeuControlador@multiplicar');
+Route::get('produtos', function() {
+    return view('produtos.produtos');
+})->name('produtos');
+
+Route::get('departamentos', function() {
+    return view('departamentos.departamentos');
+})->name('departamentos');
 
 Route::resource('clientes', 'ClienteControlador');
