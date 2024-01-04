@@ -1,5 +1,7 @@
 @extends('layouts.principal')
 
+@section('titulo', 'Clientes')
+
 @section('conteudo') 
     <h3>{{ $titulo }}</h3>
     <hr>
@@ -25,7 +27,7 @@
             {{ $i }}
         @endfor --}}
 
-        @foreach ($clientes as $c)
+        {{-- @foreach ($clientes as $c)
             <br>{{ $c['nome'] }}
             @if ($loop->first)
                 (Primeiro)
@@ -35,7 +37,7 @@
             @endif
 
             ({{ $loop->index }}) - {{ $loop->iteration }} | {{ $loop->count }}
-        @endforeach    
+        @endforeach     --}}
 
 
 
